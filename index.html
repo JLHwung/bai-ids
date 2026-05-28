@@ -21,7 +21,7 @@
         <input type="checkbox" id="toggle-light-mode">
     </div>
     <h1>（白式）IDS 延展语法导论</h1>
-    <subtitle>（2026-03-21 更新）</subtitle>
+    <subtitle>（2026-05-28 更新）</subtitle>
 
     <section>
         <h3>目录</h3>
@@ -1553,7 +1553,7 @@ Unique_Sequence_Separator ::= "{" ("?"  One_Digit_Number?)? Ideograph_Char_with_
             <ul>
                 <li>「日」和「曰」的 IDS 完全一样：<bai-ids>⿴囗一</bai-ids>。为了区分它们，判断常用字是「日」，然后给「曰」使用「唯一化分隔符」：<bai-ids>{曰}⿴囗一</bai-ids>。</li>
                 <li>「土」和「士」的 IDS 完全一样：<bai-ids>⿱十一</bai-ids>。为了区分它们，判断常用字是「土」，然后给「士」使用「唯一化分隔符」：<bai-ids>{士}⿱十一</bai-ids>。</li>
-                <li>「一」的 IDS lv0 条目里面有两个形：<bai-ids>一&#09;#(H)(.);{一}#(T)(t)</bai-ids>，其中「<bai-ids>一t</bai-ids>」的笔画链<bai-ids>#(T)</bai-ids>与「<bai-ids>㇀</bai-ids>」(U+31C0，提) 完全一样，因此需要使用「唯一化分隔符」来区分「<bai-ids>一t</bai-ids>」的 IDS。</li>
+                <li>「一」的 IDS lv0 条目里面有两个形：<bai-ids>一&#09;#(H)(.);{一}#(T)(t)</bai-ids>，其中「<bai-ids>一t</bai-ids>」的笔画链<bai-ids>#(T)</bai-ids>与「<bai-ids>㇀</bai-ids>」(U+31C0，提) 完全一样，因此需要使用「唯一化分隔符」来区分「<bai-ids>一t</bai-ids>」的 IDS。为什么需要区分呢？「<bai-ids>一t</bai-ids>」是用在「<bai-ids>一</bai-ids>」横避让的情况，而「<bai-ids>㇀</bai-ids>」的笔画不可和「<bai-ids>一</bai-ids>」混淆。例如「土」在左边如「块」时，「土」的提标为「<bai-ids>一t</bai-ids>」；「刁」的笔画为「<bai-ids>㇀</bai-ids>」，不可以替换成横，因此在接下去的 lv1 合并时，不会把「<bai-ids>㇀</bai-ids>」的笔画合并进去「<bai-ids>一</bai-ids>」。</li>
                 <li>「<a href="https://zi.tools/zi/%E5%8F%B1" target="_blank">叱（U+53F1）</a>」有两个形：<bai-ids>⿰口.𠤎.(.)</bai-ids>（撇𠤎）和<bai-ids>⿰口.七.(V)</bai-ids>（横七）。其中「<bai-ids>叱V</bai-ids>」来源和已编码字「<a href="https://zi.tools/zi/%F0%A0%AE%9F" target="_blank">𠮟（U+20B9F）</a>」撞形，因此需要使用「唯一化分隔符」来区分「<bai-ids>叱V</bai-ids>」的 IDS：<bai-ids>{?叱}⿰口.七.(V)</bai-ids>。</li>
                 <li>
                     「<a href="https://zi.tools/zi/%F0%A1%AE%82" target="_blank">𡮂（U+21B82）</a>」有两个形：<bai-ids>{𡮂J}⿱小.𤽄V(J)</bai-ids> J 源与<bai-ids>{𡮂T}⿱小s𤽄V(T)</bai-ids> T 源。这两者的表达式和「<a href="https://zi.tools/zi/%F0%A1%AD%BD" target="_blank">𡭽（U+21B7D）</a>」的 IDS 组合一样：<bai-ids>⿱小s𤽄V(.);⿱小.𤽄V(J)</bai-ids>，因此给「𡮂（U+21B82）」的 IDS 组合「唯一化分隔符」加上按提交源的「字形变体标识符」。
@@ -1877,7 +1877,7 @@ Unique_Sequence_Separator ::= "{" ("?"  One_Digit_Number?)? Ideograph_Char_with_
     <section>
         <h2 id="8">8. 实操练习</h2>
         <p>
-            接下来请尝试理解<a href="https://zi.tools/zi/%E9%BE%9C" target="_blank">「龜」(U+9F9C) </a>的白式 IDS 条目（lv0），并依据 IDS 绘出最终字形。【注：在<a href="https://github.com/yi-bai/ids/tree/8a585351e19dac0635b61cb9ea50646e426173d4" target="_blank">编撰时的 IDS 数据库</a>里面，<bai-ids>⿴[4]？乂</bai-ids>错误写成<bai-ids>⿴[3]？乂</bai-ids>，本页面暂时将其调整以符合预期字形。】
+            接下来请尝试理解<a href="https://zi.tools/zi/%E9%BE%9C" target="_blank">「龜」(U+9F9C) </a>的白式 IDS 条目（lv0），并依据 IDS 绘出最终字形。
         </p>
         <pre class="ids">龜&#09;⿱丿⿻#(-丨一-𠃍丨b一b乚)⿰⿱⺕⺕⿼コ乂d(.);⿱⺈⿹⿴⿻[1:]⿺乚.#(丨b一-𠃍)#(一-𠃍丨b一)乂d⿱⺕⺕(H);⿱⺈⿴[4]⿻[.,.__,r,,bxx]⿹⿺乚.丨⿱ココ⿱#(一-𠃍丨b一)コ乂d(J);⿱⺈⿻[1:]⿺乚.丨⿱#(一-𠃍丨b一)⿰⿱⺕⺕⿼コ乂d(K);⿱⺈⿴[4]⿻[.,.__,r,,bx.]⿹⿺乚.丨⿱ココ⿱#(一-𠃍丨b一)コ乂d(T);⿱⺈⿻#(-丨一-𠃍丨b一b乚)⿰⿱⺕⺕⿼コ乂d(V);⿱⺈⿻[1:]乚.⿱口.⿰⿱⺕⺕目(q4072)</pre>
         
